@@ -1,13 +1,13 @@
-const changeBtn = document.querySelector('#changeColorbtn');
-const body= document.querySelector('body');
+const button = document.querySelector('#changeColorbtn');
+const body= document.body;
 const h1 = document.querySelector('h1');
 
-function random (){
-    return Math.floor((Math.random () * 256) + 1 )
+function makeRandomColor (){
+    return Math.floor((Math.random () * 255) + 1 )
 }
 
 function changeColor (){
-    return `rgb(${random()},${random()},${random()})`
+    return `rgb(${makeRandomColor()},${makeRandomColor()},${makeRandomColor()})`
 }
 
 function updateBgColor (){
@@ -16,4 +16,4 @@ function updateBgColor (){
     h1.innerHTML = newColor;
 }
 
-changeBtn.addEventListener("click", updateBgColor);
+button.addEventListener("click", updateBgColor);
